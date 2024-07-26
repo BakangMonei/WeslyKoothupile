@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Fullstack Developer Intern Practical Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The following are practical tasks designed for a fullstack developer intern interview. The tasks will evaluate skills in Flutter, ReactJS, JavaScript, GIT, Cloud, and NodeJS.
 
-## Available Scripts
+## Task 1: Basic CRUD Application
 
-In the project directory, you can run:
+### Description
+Build a simple CRUD (Create, Read, Update, Delete) application using ReactJS for the frontend and NodeJS for the backend. The application should allow users to manage a list of items (e.g., tasks, notes).
 
-### `npm start`
+### Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Frontend:
+- Use ReactJS to create a user interface.
+- Implement forms for creating and updating items.
+- Display the list of items with options to edit and delete.
+- Use Axios or Fetch for making API requests.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Backend:
+- Use NodeJS and Express to create a RESTful API.
+- Implement endpoints for creating, reading, updating, and deleting items.
+- Use Firebase or similar for data persistence.
 
-### `npm test`
+### Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Prerequisites
+- NodeJS
+- NPM or Yarn
+- Firebase account
 
-### `npm run build`
+#### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+    ```bash
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install frontend dependencies:
+    ```bash
+    cd frontend
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install backend dependencies:
+    ```bash
+    cd backend
+    npm install
+    ```
 
-### `npm run eject`
+#### Running the Application
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Start the backend server:
+    ```bash
+    cd backend
+    npm start
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Start the frontend server:
+    ```bash
+    cd frontend
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Usage
 
-## Learn More
+1. Open the frontend application in your browser:
+    ```
+    http://localhost:3000
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Use the application to manage your list of items. You can create, read, update, and delete items through the user interface.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Contributing
+If you have suggestions for improvements, please open an issue or submit a pull request.
 
-### Code Splitting
+### License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

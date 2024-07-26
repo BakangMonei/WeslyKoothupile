@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import TaskList from '../components/TaskList';
 import TaskForm from '../components/TaskForm';
-// tasks.js
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc, query, where } from "firebase/firestore";
 import { getTasks, addTask, updateTask, deleteTask } from '../components/Task';
 import { auth, firestore } from '../database/firebase';
@@ -53,22 +52,28 @@ const Dashboard = () => {
     };
 
     return (
-        <div>
-            {userData && (
-                <h1>
-                    Welcome, {userData.firstName} {userData.lastName}!
-                </h1>
-            )}
-            <TaskForm
-                addTask={handleAddTask}
-                updateTask={handleUpdateTask}
-                editingTask={editingTask}
-            />
-            <TaskList
-                tasks={tasks}
-                deleteTask={handleDeleteTask}
-                setEditingTask={setEditingTask}
-            />
+        <div className="dashboard-container">
+            <header className="dashboard-header">
+                {userData && (
+                    <h1 className="welcome-message">
+                        Welcome, {userData.firstName} {userData.lastName}!
+                    </h1>
+                )}
+            </header>
+            <main className="dashboard-content">
+                <TaskForm
+                    addTask={handleAddTask}
+                    updateTask={handleUpdateTask}
+                    editingTask={editingTask}
+                    className="task-form"
+                />
+                <TaskList
+                    tasks={tasks}
+                    deleteTask={handleDeleteTask}
+                    setEditingTask={setEditingTask}
+                    className="task-list"
+                />
+            </main>
         </div>
     );
 };

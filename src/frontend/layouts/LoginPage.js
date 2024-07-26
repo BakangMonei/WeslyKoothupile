@@ -53,7 +53,7 @@ export const LoginPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-md shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-semibold mb-4">Login</h1>
+        <h1 className="text-2xl font-semibold mb-4 text-center">Login</h1>
         {error && <p className="text-red-500">{error}</p>}
         <form onSubmit={handleLogin}>
           <div className="mb-4">
