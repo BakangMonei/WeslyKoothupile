@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import TaskManager from './frontend/components/TaskManager';
+import LoginPage from './frontend/layouts/LoginPage';
+import RegistrationPage from './frontend/layouts/RegistrationPage';
+import ForgotPasswordPage from './frontend/layouts/ForgotPasswordPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Dashboard from './frontend/components/Dashboard';
+import { AuthProvider } from './frontend/context/AuthContext';
+import PrivateRoute from './frontend/components/PrivateRoute';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegistrationPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+          <Route path="/" element={<PrivateRoute><TaskManager /></PrivateRoute>} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
-}
+};
 
 export default App;
